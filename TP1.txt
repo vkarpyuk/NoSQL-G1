@@ -1,0 +1,219 @@
+﻿a) Modelo de datos con una colección (Con datos de un socio como ejemplo):
+
+
+db.socios.insert({
+        id_socio: 1,
+        nro_socio:112323,
+        nombre: “Juan Cruz”,
+        apellido: “Biroccio”,
+dni: 27787688,
+direccion: “Pje Bollini 778 - CABA”,
+deportes: [“RUGBY”],
+cuotas: [
+  {
+        nro_cuota:1,
+        fecha_emision:ISODate(‘2014-01-01 00:00:00Z’),
+        fecha_vencimiento:ISODate(‘2014-01-10 00:00:00Z’),
+        importe:325,
+        fecha_pago:ISODate(‘2014-01-07 00:00:00Z’)
+  },
+  {
+        nro_cuota:2,
+        fecha_emision:ISODate(‘2014-02-01 00:00:00Z’),
+        fecha_vencimiento:ISODate(‘2014-02-10 00:00:00Z’),
+        importe:325,
+        fecha_pago:ISODate(‘2014-02-06 00:00:00Z’)
+  },
+  {
+        nro_cuota:3,
+        fecha_emision:ISODate(‘2014-03-01 00:00:00Z’),
+        fecha_vencimiento:ISODate(‘2014-03-10 00:00:00Z’),
+        importe:325,
+        fecha_pago:ISODate(‘2014-03-07 00:00:00Z’)
+   },
+  {
+        nro_cuota:4,
+        fecha_emision:ISODate(‘2014-04-01 00:00:00Z’),
+        fecha_vencimiento:ISODate(‘2014-04-10 00:00:00Z’),
+        importe:358,
+        fecha_pago:null
+   }
+]
+})
+
+
+
+
+b) Insert de los datos en formato consola:
+
+
+
+
+db.socios.insert({id_socio:1,nro_socio:112323,nombre:"Juan Cruz",apellido:"Biroccio",dni:"27787688",direccion:"Pje Bollini 778 - CABA",deportes:["RUGBY"],cuotas:[{nro_cuota:1,fecha_emision:ISODate('2014-01-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-01-10 00:00:00Z'),importe:325,fecha_pago:ISODate('2014-01-07 00:00:00Z')},{nro_cuota:2,fecha_emision:ISODate('2014-02-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-02-10 00:00:00Z'),importe:325,fecha_pago:ISODate('2014-02-06 00:00:00Z')},{nro_cuota:3,fecha_emision:ISODate('2014-03-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-03-10 00:00:00Z'),importe:325,fecha_pago:ISODate('2014-03-07 00:00:00Z')},{nro_cuota:4,fecha_emision:ISODate('2014-04-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-04-10 00:00:00Z'),importe:358,fecha_pago:null}]})
+
+
+
+
+db.socios.insert({id_socio:2,nro_socio:113245,nombre:"Martina",apellido:"Pardo",dni:"25787777",direccion:"J. Newbery 4633 - CABA",deportes:["CESTO BALL","HOCKEY S/ CESPED"],cuotas:[{nro_cuota:1,fecha_emision:ISODate('2014-01-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-01-10 00:00:00Z'),importe:325,fecha_pago:ISODate('2014-01-05 00:00:00Z')},{nro_cuota:2,fecha_emision:ISODate('2014-02-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-02-10 00:00:00Z'),importe:325,fecha_pago:null}
+]})
+
+
+
+
+db.socios.insert({id_socio:3,nro_socio:114536,nombre:"Miguel",apellido:"Suparo",dni:"23787399",direccion:"B. Mitre 987 9no A - CABA",deportes:["RUGBY","TENNIS"],cuotas:[{nro_cuota:1,fecha_emision:ISODate('2014-01-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-01-10 00:00:00Z'),importe:275,fecha_pago:ISODate('2014-01-08 00:00:00Z')},{nro_cuota:2,fecha_emision:ISODate('2014-02-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-02-10 00:00:00Z'),importe:275,fecha_pago:ISODate('2014-02-04 00:00:00Z')},{nro_cuota:3,fecha_emision:ISODate('2014-03-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-03-10 00:00:00Z'),importe:275,fecha_pago:ISODate('2014-03-09 00:00:00Z')}
+]})
+
+
+
+
+db.socios.insert({id_socio:4,nro_socio:120778,nombre:"Soledad",apellido:"Malvasi",dni:"25373789",direccion:"Rojas 1123 11vo 10 - CABA",deportes:["HOCKEY S/ CESPED"],cuotas:[{nro_cuota:1,fecha_emision:ISODate('2014-01-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-01-10 00:00:00Z'),importe:275,fecha_pago:null}]})
+
+
+
+
+db.socios.insert({id_socio:5,nro_socio:121567,nombre:"Rodolfo",apellido:"Broggi",dni:"21667984",direccion:"J. B. Justo 6557 - CABA",deportes:["RUGBY","TENNIS"],cuotas:[{nro_cuota:1,fecha_emision:ISODate('2014-01-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-01-10 00:00:00Z'),importe:325,fecha_pago:ISODate('2014-01-06 00:00:00Z')},{nro_cuota:2,fecha_emision:ISODate('2014-02-01 00:00:00Z'),fecha_vencimiento:ISODate('2014-02-10 00:00:00Z'),importe:325,fecha_pago:null}]})
+
+
+
+
+
+
+
+
+c) Operaciones solicitadas:
+
+
+i.
+        db.socios.find()
+
+
+ii.
+        db.socios.find().pretty()
+
+
+iii.
+db.socios.find().limit(3).toArray()        
+
+
+iv.
+        db.socios.find({deportes:{$in:[“RUGBY”]}},{apellido:1,nombre:1,_id:0})
+otra: 
+db.socios.find({"deportes":"RUGBY"},{nombre:1,apellido:1,_id:0})
+
+
+v.
+        db.socios.find().limit(5).skip(5).toArray()
+
+
+vi.        
+        db.socios.find({“cuotas.fecha_vencimiento”:ISODate(‘2014-02-01 00:00:00Z’)})[a][b][c][d]
+
+
+vii.
+        db.socios.find({“cuotas.fecha_vencimiento”:ISODate(‘2014-02-01 00:00:00Z’)[e][f][g][h]},{nro_socio:1,nombre:1,apellido:1,dni:1,deportes:1,_id:0})
+
+
+viii.
+        db.socios.find({apellido:{$regex:’^B’}})
+
+
+ix.
+        db.socios.find({nro_socio:{$gt:3},"cuotas.fecha_emision":{$gte:ISODate("2014-0
+1-01T00:00:00Z")}}).pretty()
+
+
+
+
+x.
+db.socios.find({nro_socio:{$gt:3},"cuotas.fecha_emision":{$gte:ISODate("2014-0
+1-01T00:00:00Z")}},{nombre:1,apellido:1,dni:1,_id:0}).pretty()
+
+
+
+
+xi.
+db.socios.find({nro_socio:{$gt:3},"cuotas.fecha_emision":{$gte:ISODate("2014-0
+1-01T00:00:00Z")}},{nombre:1,apellido:1,dni:1,_id:0}[i]).count()
+
+
+
+
+xii.
+db.socios.update({nro_socio:{$gt:3},"cuotas.fecha_emision":{$gte:ISODate("2014
+-01-01T00:00:00Z")}},{$set:{"codigoInterno":1001}},{multi:true})
+
+
+
+
+xiii.
+db.socios.find({codigoInterno:{$exists:true}}).pretty()
+
+
+xiv.
+db.socios.find({codigoInterno:{$exists:true}}).sort({apellido:-1,nombre:-1}).p
+retty()
+
+
+
+
+xv.[j]
+{var cursor = db.socios.find();
+    while (cursor.hasNext()){
+        var este = cursor.next();
+        print("Nro.: " + este.nro_socio + " Ape. y Nom.: " + este.apellido + ",  " + este.nombre);
+        var cantCuotas = este.cuotas.length;
+        for(var i = 0; i < cantCuotas; i++)
+        {var date = este.cuotas[i].fecha_pago; 
+            if(date)
+            {print("Nro. cuota: " + este.cuotas[i].nro_cuota + " Fecha pago: " + date.getDate() + "/" + date.getMonth() + "/" +date.getFullYear());}
+            else
+            {print("Nro. cuota: " + este.cuotas[i].nro_cuota + " Fecha pago: " + date);}
+        }
+    }
+}
+
+
+
+
+
+
+xvi.
+db.socios.update({}, {$push:{cuotas:{nro_cuota:10, fecha_emision:ISODate('2014-09-01T00:00:00Z'), fecha_vencimiento:ISODate('2014-09-10T00:00:00Z'), importe:410}}}, {multi:true})
+
+
+xvii.
+db.socios.insert({id_socio:6,nro_socio:155155,nombre:"Emiliano",apellido:"Valotta",dni:"28333333",direccion:"Conde 454 CABA.",deportes:["RUGBY","GOLF"],cuotas:[{nro_cuota:10,fecha_emision:ISODate('2014-09-01T00:00:00Z'),fecha_vencimiento:ISODate('2014-09-10T00:00:00Z'),importe:410,fecha_pago:ISODate('2014-09-03 00:00:00Z')}]})
+
+
+xviii.
+db.socios.update({apellido:"Valotta"}, {$pull:{deportes:"RUGBY"}})
+
+
+xix.
+db.socios.update({nro_socio:{$in:[112323,114536]}}, {$push:{deportes:"GOLF"}},
+{multi:true})
+
+
+
+
+xx.
+db.socios.update({apellido:"Malvasi"}, {$pushAll:{deportes:["TENNIS", "GOLF"]},
+{multi:true})
+
+
+
+
+
+
+
+
+[a]Siguiendo el formato de las lineas de códigos anteriores... pero no tengo la VM, y me parece que debería llevar una T entre la fecha y la hora no??
+[b]_Marked as resolved_
+[c]_Re-opened_
+[d]No hace falta, con la fecha del día ("2014-02-01") es suficiente
+[e]Siguiendo el formato de las lineas de códigos anteriores... pero no tengo la VM, y me parece que debería llevar una T entre la fecha y la hora no??
+[f]_Marked as resolved_
+[g]_Re-opened_
+[h]No hace falta, con la fecha del día ("2014-02-01") es suficiente
+[i]Esto se podria eliminar, ya que se cuenta solamente.
+[j]Logre imprimir como pide el documento, si pueden pruebenlo.
